@@ -47,7 +47,9 @@
 				// Get Canvas2DContext
 				var canvas = document.querySelector('canvas');
 				var ctx = canvas.getContext("2d");
-				ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
+				if ( image != null ) {
+					ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
+				}
 
 				ctx.fillStyle = 'white';
 				ctx.strokeStyle = 'black';
